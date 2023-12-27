@@ -1,6 +1,6 @@
 # Arduino_Rubber_Ducky
 
-I used linux system to program the chip and Windows 10 system to test the attack.<br /><br />
+I used linux system to program the chip and Windows 10 system to test the attack. Arduino Uno R3 is used.<br /><br />
 
 step 1: Install dfu-programmer in the system to flash arduino with different firmwares<br />
 step 2: Upload the given sketch into the board using IDE<br />
